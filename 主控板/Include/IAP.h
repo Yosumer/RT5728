@@ -1,0 +1,17 @@
+void Enable_IAP(void);
+void Disable_IAP(void);
+void Enable_AP_Update(void);
+void Disable_AP_Update(void);
+void Enable_CONFIG_Update(void);
+void Disable_CONFIG_Update(void);
+void Trigger_IAP(void);
+void Erase_AP(char page);
+void Program_AP(char page,char *Byte);
+char Program_AP_Verify(char page,char *Byte);
+void Erase_CONFIG(void);
+char Read_CONFIG(char CFx);
+void Program_CONFIG( char CFadd, char CFdata);
+void Disable_ISP(void);
+void EEROMWR(char add,char data);
+char EEROMRD(char add);
+char Read_AP(int add);
