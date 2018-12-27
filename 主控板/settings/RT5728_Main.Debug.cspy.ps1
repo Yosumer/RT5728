@@ -23,9 +23,9 @@
 
 if ($debugfile -eq "")
 {
-& "D:\Program Files\IAR Systems\Embedded Workbench 8.0\common\bin\cspybat" -f "E:\按摩椅\RT5728\主控板\settings\RT5728_Main.Debug.general.xcl" --backend -f "E:\按摩椅\RT5728\主控板\settings\RT5728_Main.Debug.driver.xcl" 
+& "D:\Program Files\IAR Systems\Embedded Workbench 8.0\common\bin\cspybat" -f "F:\荣泰健康\按摩椅\RT5728\主控板\settings\RT5728_Main.Debug.general.xcl" --backend -f "F:\荣泰健康\按摩椅\RT5728\主控板\settings\RT5728_Main.Debug.driver.xcl" 
 }
 else
 {
-& "D:\Program Files\IAR Systems\Embedded Workbench 8.0\common\bin\cspybat" -f "E:\按摩椅\RT5728\主控板\settings\RT5728_Main.Debug.general.xcl" --debug_file=$debugfile --backend -f "E:\按摩椅\RT5728\主控板\settings\RT5728_Main.Debug.driver.xcl" 
+& "D:\Program Files\IAR Systems\Embedded Workbench 8.0\common\bin\cspybat" -f "F:\荣泰健康\按摩椅\RT5728\主控板\settings\RT5728_Main.Debug.general.xcl" --debug_file=$debugfile --backend -f "F:\荣泰健康\按摩椅\RT5728\主控板\settings\RT5728_Main.Debug.driver.xcl" 
 }

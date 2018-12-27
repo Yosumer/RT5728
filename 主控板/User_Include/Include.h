@@ -10,7 +10,7 @@
 
 #define T1Nuber 1384
 #define LED  P15
-#define RS485_EN  P30
+#define RS485_EN  P05
 
 #define Blue  P03
 #define Red  P01

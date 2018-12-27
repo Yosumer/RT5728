@@ -91,7 +91,7 @@ void PWM_Init(void)
 void GPIO_Init(void)
 {
     Set_All_GPIO_Quasi_Mode;
-//    P30_PushPull_Mode;//485EN
+    P05_PushPull_Mode;//485EN
 //    P06_PushPull_Mode;//TX
     return;
 }

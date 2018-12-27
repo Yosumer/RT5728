@@ -1,11 +1,11 @@
-"E:\按摩椅\RT5728\主控板\User\Interrupt.c"
+"F:\荣泰健康\按摩椅\RT5728\主控板\User\Interrupt.c"
 -std=c99
 -ferror-limit=0
 -fbracket-depth=512
 -I
-E:\按摩椅\RT5728\主控板\Include
+F:\荣泰健康\按摩椅\RT5728\主控板\Include
 -I
-E:\按摩椅\RT5728\主控板\User_Include
+F:\荣泰健康\按摩椅\RT5728\主控板\User_Include
 -I
 D:\Program Files\IAR Systems\Embedded Workbench 8.0\8051\inc
 -I
@@ -13,9 +13,9 @@ D:\Program Files\IAR Systems\Embedded Workbench 8.0\8051\lib\dlib
 -I
 D:\Program Files\IAR Systems\Embedded Workbench 8.0\8051\inc\clib
 -I
-E:\按摩椅\RT5728\主控板\Include
+F:\荣泰健康\按摩椅\RT5728\主控板\Include
 -I
-E:\按摩椅\RT5728\主控板\User_Include
+F:\荣泰健康\按摩椅\RT5728\主控板\User_Include
 -D__CHAR_BITS__=8
 -D__CHAR_MAX__=0xff
 -D__CHAR_MIN__=0
