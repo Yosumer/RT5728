@@ -66,6 +66,7 @@
     <array_types>
         <Fmt0>char[19]	4	0</Fmt0>
         <Fmt1>char[57]	4	0</Fmt1>
+        <Fmt2>char[8]	4	0</Fmt2>
     </array_types>
     <watch_formats>
         <Fmt0>{W}1:CRCH	4	0</Fmt0>
@@ -83,8 +84,7 @@
         <LogFile>_ ""</LogFile>
     </TermIOLog>
     <Breakpoints>
-        <Bp0>_ "STD_CODE" "{$PROJ_DIR$\User\Comm.c}.159.17" 1 0 0 0 "" 0 ""</Bp0>
-        <Count>1</Count>
+        <Count>0</Count>
     </Breakpoints>
     <Aliases>
         <Count>0</Count>
