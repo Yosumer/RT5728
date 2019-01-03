@@ -122,18 +122,6 @@ typedef union
     }Byte;
 }RT_Feedback;
 /*******************************************************************************
-*       RT_ControlParame struct
-*******************************************************************************/
-typedef struct
-{
-    unsigned char HandControlParame1;
-    unsigned char HandControlParame2;
-    unsigned char UpControlParame1;
-    unsigned char UpControlParame2;
-    unsigned char DownControlParame1;
-    unsigned char DownControlParame2;
-}RT_ControlParame;
-/*******************************************************************************
 *       FIFO.c Function declaration
 *******************************************************************************/
 extern RT_FIFO FIFO;

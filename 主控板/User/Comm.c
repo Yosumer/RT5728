@@ -2,7 +2,6 @@
 RT_SendDrive SendDrive;
 RT_HandController HandController;
 RT_Feedback Feedback;
-RT_ControlParame ControlParame;
 
 __xdata char CRCH;
 __xdata char CRCL;
@@ -11,11 +10,12 @@ __xdata char TXCount;
 __xdata char STate;
 __xdata char CommRXCTime;
 __xdata char CommTXCTime;
+__xdata char HandControlParam1;
+__xdata char HandControlParam2;
+
 char Receive[19];
 
 void * my_memcpy(void *dest,void *src,unsigned count );
-void ControlParameProcess(RT_ControlParame *pc);
-
 
 /*******************************************************************************
 *       CommTime Function
@@ -160,9 +160,8 @@ void CommProcess(void)
                 if((Receive[11]==CRCL)&&(Receive[12]==CRCH))
                 {
                     if(Receive[2]!=0x0a) break;
-                    ControlParame.HandControlParame1 = Receive[9];
-                    ControlParame.HandControlParame2 = Receive[10];
-                    ControlParameProcess(&ControlParame);
+                    HandControlParam1 = Receive[9];
+                    HandControlParam2 = Receive[10];
                 }
                 break;
             }
@@ -227,8 +226,8 @@ void CommSend(void)
                     SendDrive.Byte.CommanH=0x30;
                     SendDrive.Byte.LenghtL=0x02;
                     SendDrive.Byte.LenghtH=0x00;
-                    SendDrive.Byte.Data[0]=ControlParame.UpControlParame1;
-                    SendDrive.Byte.Data[1]=ControlParame.UpControlParame2;
+                    SendDrive.Byte.Data[0]=HandControlParam1;
+                    SendDrive.Byte.Data[1]=HandControlParam2;
                     CRC_CCITT(SendDrive.nSendDrive,11);
                     SendDrive.Byte.CRCL=CRCL;
                     SendDrive.Byte.CRCH=CRCH;
@@ -248,8 +247,8 @@ void CommSend(void)
                     SendDrive.Byte.CommanH=0x30;
                     SendDrive.Byte.LenghtL=0x02;
                     SendDrive.Byte.LenghtH=0x00;
-                    SendDrive.Byte.Data[0]=ControlParame.DownControlParame1;
-                    SendDrive.Byte.Data[1]=ControlParame.DownControlParame2;
+                    SendDrive.Byte.Data[0]=HandControlParam1;
+                    SendDrive.Byte.Data[1]=HandControlParam2;
                     CRC_CCITT(SendDrive.nSendDrive,11);
                     SendDrive.Byte.CRCL=CRCL;
                     SendDrive.Byte.CRCH=CRCH;
@@ -282,56 +281,6 @@ void CommSend(void)
         }
     }
     return;
-}
-
-void ControlParameProcess(RT_ControlParame *pc)
-{
-    if(pc->HandControlParame1==0&&pc->HandControlParame2==0)//空键值
-    {
-        pc->DownControlParame1=0;
-        pc->DownControlParame2=0;
-        pc->UpControlParame1=0;
-        pc->UpControlParame2=0;
-        return;
-    }
-    switch(pc->HandControlParame1)
-    {
-        case 0x20:  //手动模式
-            if(pc->HandControlParame2>=0x60&&pc->HandControlParame2<=0x66)
-            {
-                pc->UpControlParame1 = pc->HandControlParame1;
-                pc->UpControlParame2 = pc->HandControlParame2;
-            }
-            else if(pc->HandControlParame2>=0x67&&pc->HandControlParame2<=0x6d)
-            {
-                pc->DownControlParame1 = pc->HandControlParame1;
-                pc->DownControlParame2 = pc->HandControlParame2;
-            }
-            break;
-        case 0x50:
-            if(pc->HandControlParame2>=0x10&&pc->HandControlParame2<=0x13)
-            {
-                pc->DownControlParame1 = pc->HandControlParame1;
-                pc->DownControlParame2 = pc->HandControlParame2;
-            }
-            else if(pc->HandControlParame2>=0x1d&&pc->HandControlParame2<=0x1f)
-            {
-                pc->UpControlParame1 = pc->HandControlParame1;
-                pc->UpControlParame2 = pc->HandControlParame2;
-            }
-            break;
-        case 0x51:
-            pc->DownControlParame1 = pc->HandControlParame1;
-            pc->DownControlParame2 = pc->HandControlParame2;
-            break;
-        case 0x52:
-            pc->UpControlParame1 = pc->HandControlParame1;
-            pc->UpControlParame2 = pc->HandControlParame2;
-            break;
-        default:
-            break;
-    }
-
 }
 
 /*******************************************************************************

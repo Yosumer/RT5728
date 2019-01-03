@@ -2,7 +2,7 @@
 #                                                                              #
 #      IAR Universal Linker V6.5.2.97                                          #
 #                                                                              #
-#           Link time     =  27/Dec/2018  15:48:24                             #
+#           Link time     =  03/Jan/2019  14:17:42                             #
 #           Target CPU    =  x51                                               #
 #           List file     =  F:\ÈÙÌ©½¡¿µ\°´Ä¦ÒÎ\RT5728\Ö÷¿Ø°å\Debug\List\RT572 #
 #                            8_Main.map                                        #
@@ -12,7 +12,7 @@
 #                            UBROF version 10.0.6                              #
 #                            Using library modules for C-SPY (-rt)             #
 #           Command line  =  -f                                                #
-#                            C:\Users\wangqian\AppData\Local\Temp\EW909A.tmp   #
+#                            C:\Users\wangqian\AppData\Local\Temp\EW244A.tmp   #
 #                            (F:\ÈÙÌ©½¡¿µ\°´Ä¦ÒÎ\RT5728\Ö÷¿Ø°å\Debug\Obj\Comm. #
 #                            r51                                               #
 #                            F:\ÈÙÌ©½¡¿µ\°´Ä¦ÒÎ\RT5728\Ö÷¿Ø°å\Debug\Obj\Common #
@@ -195,7 +195,6 @@ Absolute parts
                                                    Comm (Comm)
                                                    CommProcess (Comm)
                                                    CommSend (Comm)
-                                                   ControlParameProcess (Comm)
                                                    DataReceive (Comm)
                                                    Disable_CONFIG_Update (IAP)
                                                    Disable_IAP (IAP)
@@ -298,17 +297,9 @@ IDATA_Z
            =====                   =======         ======
            Feedback                00000041 
     -------------------------------------------------------------------------
-IDATA_Z
-  Relative segment, address: IDATA 00000049 - 0000004E (0x6 bytes), align: 0
-  Segment part 11.            Intra module refs:   CommProcess
-                                                   CommSend
-           ENTRY                   ADDRESS         REF BY
-           =====                   =======         ======
-           ControlParame           00000049 
-    -------------------------------------------------------------------------
 XDATA_Z
   Relative segment, address: XDATA 00000001 - 00000001 (0x1 bytes), align: 0
-  Segment part 12.            Intra module refs:   CRC_CCITT
+  Segment part 11.            Intra module refs:   CRC_CCITT
                                                    CommProcess
                                                    CommSend
            ENTRY                   ADDRESS         REF BY
@@ -317,7 +308,7 @@ XDATA_Z
     -------------------------------------------------------------------------
 XDATA_Z
   Relative segment, address: XDATA 00000002 - 00000002 (0x1 bytes), align: 0
-  Segment part 13.            Intra module refs:   CRC_CCITT
+  Segment part 12.            Intra module refs:   CRC_CCITT
                                                    CommProcess
                                                    CommSend
            ENTRY                   ADDRESS         REF BY
@@ -326,7 +317,7 @@ XDATA_Z
     -------------------------------------------------------------------------
 XDATA_Z
   Relative segment, address: XDATA 00000003 - 00000003 (0x1 bytes), align: 0
-  Segment part 14.            Intra module refs:   CommProcess
+  Segment part 13.            Intra module refs:   CommProcess
                                                    DataReceive
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
@@ -334,73 +325,89 @@ XDATA_Z
     -------------------------------------------------------------------------
 XDATA_Z
   Relative segment, address: XDATA 00000004 - 00000004 (0x1 bytes), align: 0
-  Segment part 15.            Intra module refs:   CommSend
+  Segment part 14.            Intra module refs:   CommSend
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
            TXCount                 00000004        UART0 (Interrupt)
     -------------------------------------------------------------------------
 XDATA_Z
   Relative segment, address: XDATA 00000005 - 00000005 (0x1 bytes), align: 0
-  Segment part 16.            Intra module refs:   DataReceive
+  Segment part 15.            Intra module refs:   DataReceive
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
            STate                   00000005        main (main)
     -------------------------------------------------------------------------
 XDATA_Z
   Relative segment, address: XDATA 00000006 - 00000006 (0x1 bytes), align: 0
-  Segment part 17.            Intra module refs:   RXC_Time
+  Segment part 16.            Intra module refs:   RXC_Time
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
            CommRXCTime             00000006        UART0 (Interrupt)
     -------------------------------------------------------------------------
 XDATA_Z
   Relative segment, address: XDATA 00000007 - 00000007 (0x1 bytes), align: 0
-  Segment part 18.            Intra module refs:   Send_Time
+  Segment part 17.            Intra module refs:   Send_Time
                                                    TXC_Time
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
            CommTXCTime             00000007        UART0 (Interrupt)
     -------------------------------------------------------------------------
-IDATA_Z
-  Relative segment, address: IDATA 0000004F - 00000061 (0x13 bytes), align: 0
+XDATA_Z
+  Relative segment, address: XDATA 00000008 - 00000008 (0x1 bytes), align: 0
+  Segment part 18.            Intra module refs:   CommProcess
+                                                   CommSend
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           HandControlParam1       00000008 
+    -------------------------------------------------------------------------
+XDATA_Z
+  Relative segment, address: XDATA 00000009 - 00000009 (0x1 bytes), align: 0
   Segment part 19.            Intra module refs:   CommProcess
+                                                   CommSend
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           HandControlParam2       00000009 
+    -------------------------------------------------------------------------
+IDATA_Z
+  Relative segment, address: IDATA 00000049 - 0000005B (0x13 bytes), align: 0
+  Segment part 20.            Intra module refs:   CommProcess
                                                    DataReceive
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           Receive                 0000004F 
+           Receive                 00000049 
     -------------------------------------------------------------------------
 <NEAR_CODE> 1 (was NEAR_CODE)
   Relative segment, address: CODE 000001CD - 000001F1 (0x25 bytes), align: 0
-  Segment part 21.
+  Segment part 22.
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
            RXC_Time                000001CD        Timer1_ISR (Interrupt)
     -------------------------------------------------------------------------
 <NEAR_CODE> 1 (was NEAR_CODE)
   Relative segment, address: CODE 000001F2 - 00000212 (0x21 bytes), align: 0
-  Segment part 22.
+  Segment part 23.
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
            TXC_Time                000001F2        Timer1_ISR (Interrupt)
     -------------------------------------------------------------------------
 <NEAR_CODE> 1 (was NEAR_CODE)
   Relative segment, address: CODE 00000213 - 0000023C (0x2a bytes), align: 0
-  Segment part 23.
+  Segment part 24.
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
            Send_Time               00000213        Timer1_ISR (Interrupt)
     -------------------------------------------------------------------------
 IDATA_Z
-  Relative segment, address: IDATA 00000062 - 00000062 (0x1 bytes), align: 0
-  Segment part 20.            Intra module refs:   Send_Time
+  Relative segment, address: IDATA 0000005C - 0000005C (0x1 bytes), align: 0
+  Segment part 21.            Intra module refs:   Send_Time
            LOCAL                   ADDRESS         
            =====                   =======         
            Send_Time::SendTime75ms
-                                   00000062 
+                                   0000005C 
     -------------------------------------------------------------------------
 <NEAR_CODE> 1 (was NEAR_CODE)
   Relative segment, address: CODE 0000023D - 000002B7 (0x7b bytes), align: 0
-  Segment part 24.            Intra module refs:   CommProcess
+  Segment part 25.            Intra module refs:   CommProcess
                                                    CommSend
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
@@ -409,49 +416,42 @@ IDATA_Z
     -------------------------------------------------------------------------
 <NEAR_CODE> 1 (was NEAR_CODE)
   Relative segment, address: CODE 000002B8 - 00000365 (0xae bytes), align: 0
-  Segment part 25.            Intra module refs:   Comm
+  Segment part 26.            Intra module refs:   Comm
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
            DataReceive             000002B8 
                ISTACK = 00000000 ( 00000001 )
     -------------------------------------------------------------------------
 <NEAR_CODE> 1 (was NEAR_CODE)
-  Relative segment, address: CODE 00000366 - 0000050F (0x1aa bytes), align: 0
-  Segment part 26.            Intra module refs:   Comm
+  Relative segment, address: CODE 00000366 - 0000050C (0x1a7 bytes), align: 0
+  Segment part 27.            Intra module refs:   Comm
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
            CommProcess             00000366 
                calls direct
     -------------------------------------------------------------------------
 <NEAR_CODE> 1 (was NEAR_CODE)
-  Relative segment, address: CODE 00000510 - 00000649 (0x13a bytes), align: 0
-  Segment part 27.            Intra module refs:   Comm
+  Relative segment, address: CODE 0000050D - 00000650 (0x144 bytes), align: 0
+  Segment part 28.            Intra module refs:   Comm
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           CommSend                00000510 
+           CommSend                0000050D 
                calls direct
     -------------------------------------------------------------------------
 <NEAR_CODE> 1 (was NEAR_CODE)
-  Relative segment, address: CODE 0000064A - 0000073A (0xf1 bytes), align: 0
-  Segment part 28.            Intra module refs:   CommProcess
-           ENTRY                   ADDRESS         REF BY
-           =====                   =======         ======
-           ControlParameProcess    0000064A 
-    -------------------------------------------------------------------------
-<NEAR_CODE> 1 (was NEAR_CODE)
-  Relative segment, address: CODE 0000073B - 00000785 (0x4b bytes), align: 0
+  Relative segment, address: CODE 00000651 - 0000069B (0x4b bytes), align: 0
   Segment part 29.            Intra module refs:   CommSend
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           my_memcpy               0000073B 
+           my_memcpy               00000651 
                ISTACK = 00000000 ( 00000003 )
     -------------------------------------------------------------------------
 <NEAR_CODE> 1 (was NEAR_CODE)
-  Relative segment, address: CODE 00000786 - 00000795 (0x10 bytes), align: 0
+  Relative segment, address: CODE 0000069C - 000006AB (0x10 bytes), align: 0
   Segment part 30.
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           Comm                    00000786        main (main)
+           Comm                    0000069C        main (main)
                calls direct
 
     *************************************************************************
@@ -582,11 +582,11 @@ SFR_AN
            SCON_1_bit              000000F8 
     -------------------------------------------------------------------------
 <NEAR_CODE> 1 (was NEAR_CODE)
-  Relative segment, address: CODE 00000B6E - 00000B79 (0xc bytes), align: 0
+  Relative segment, address: CODE 00000A90 - 00000A9B (0xc bytes), align: 0
   Segment part 33.
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           Send_Data_To_UART0      00000B6E        UART0 (Interrupt)
+           Send_Data_To_UART0      00000A90        UART0 (Interrupt)
                ISTACK = 00000002 ( 00000000 )
 
     *************************************************************************
@@ -651,11 +651,11 @@ SFR_AN
            TH2                     000000CD 
     -------------------------------------------------------------------------
 IDATA_Z
-  Relative segment, address: IDATA 00000063 - 00000063 (0x1 bytes), align: 0
+  Relative segment, address: IDATA 0000005D - 0000005D (0x1 bytes), align: 0
   Segment part 20.
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           BIT_TMP                 00000063        MODIFY_HIRC_16600 (Init)
+           BIT_TMP                 0000005D        MODIFY_HIRC_16600 (Init)
                                                    main (main)
 
     *************************************************************************
@@ -666,33 +666,33 @@ IDATA_Z
   SEGMENTS IN THE MODULE
   ======================
 IDATA_Z
-  Relative segment, address: IDATA 00000064 - 0000009F (0x3c bytes), align: 0
+  Relative segment, address: IDATA 0000005E - 00000099 (0x3c bytes), align: 0
   Segment part 6.             Intra module refs:   FIFO_Read
                                                    FIFO_Write
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           FIFO                    00000064        FIFO_Init (Init)
+           FIFO                    0000005E        FIFO_Init (Init)
     -------------------------------------------------------------------------
 XDATA_Z
-  Relative segment, address: XDATA 00000008 - 00000008 (0x1 bytes), align: 0
+  Relative segment, address: XDATA 0000000A - 0000000A (0x1 bytes), align: 0
   Segment part 7.             Intra module refs:   FIFO_Read
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           Buffer                  00000008        DataReceive (Comm)
+           Buffer                  0000000A        DataReceive (Comm)
     -------------------------------------------------------------------------
 <NEAR_CODE> 1 (was NEAR_CODE)
-  Relative segment, address: CODE 00000AB9 - 00000B04 (0x4c bytes), align: 0
+  Relative segment, address: CODE 000009DB - 00000A26 (0x4c bytes), align: 0
   Segment part 8.
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           FIFO_Write              00000AB9        UART0 (Interrupt)
+           FIFO_Write              000009DB        UART0 (Interrupt)
     -------------------------------------------------------------------------
 <NEAR_CODE> 1 (was NEAR_CODE)
-  Relative segment, address: CODE 00000B05 - 00000B44 (0x40 bytes), align: 0
+  Relative segment, address: CODE 00000A27 - 00000A66 (0x40 bytes), align: 0
   Segment part 9.
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           FIFO_Read               00000B05        Comm (Comm)
+           FIFO_Read               00000A27        Comm (Comm)
 
     *************************************************************************
 
@@ -795,7 +795,7 @@ SFR_AN
            TA                      000000C7 
     -------------------------------------------------------------------------
 IDATA_Z
-  Relative segment, address: IDATA 000000A0 - 000000A0 (0x1 bytes), align: 0
+  Relative segment, address: IDATA 0000009A - 0000009A (0x1 bytes), align: 0
   Segment part 17.            Intra module refs:   Disable_CONFIG_Update
                                                    Disable_IAP
                                                    Enable_CONFIG_Update
@@ -803,54 +803,54 @@ IDATA_Z
                                                    Trigger_IAP
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           TMP                     000000A0 
+           TMP                     0000009A 
     -------------------------------------------------------------------------
 <NEAR_CODE> 1 (was NEAR_CODE)
-  Relative segment, address: CODE 000009FA - 00000A16 (0x1d bytes), align: 0
+  Relative segment, address: CODE 0000091C - 00000938 (0x1d bytes), align: 0
   Segment part 18.            Intra module refs:   Program_CONFIG
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           Enable_IAP              000009FA 
+           Enable_IAP              0000091C 
                ISTACK = 00000023 ( 00000000 )
     -------------------------------------------------------------------------
 <NEAR_CODE> 1 (was NEAR_CODE)
-  Relative segment, address: CODE 00000A17 - 00000A33 (0x1d bytes), align: 0
+  Relative segment, address: CODE 00000939 - 00000955 (0x1d bytes), align: 0
   Segment part 19.            Intra module refs:   Program_CONFIG
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           Disable_IAP             00000A17 
+           Disable_IAP             00000939 
                ISTACK = 00000023 ( 00000000 )
     -------------------------------------------------------------------------
 <NEAR_CODE> 1 (was NEAR_CODE)
-  Relative segment, address: CODE 00000A34 - 00000A50 (0x1d bytes), align: 0
+  Relative segment, address: CODE 00000956 - 00000972 (0x1d bytes), align: 0
   Segment part 22.            Intra module refs:   Program_CONFIG
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           Enable_CONFIG_Update    00000A34 
+           Enable_CONFIG_Update    00000956 
                ISTACK = 00000002 ( 00000000 )
     -------------------------------------------------------------------------
 <NEAR_CODE> 1 (was NEAR_CODE)
-  Relative segment, address: CODE 00000A51 - 00000A6D (0x1d bytes), align: 0
+  Relative segment, address: CODE 00000973 - 0000098F (0x1d bytes), align: 0
   Segment part 23.            Intra module refs:   Program_CONFIG
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           Disable_CONFIG_Update   00000A51 
+           Disable_CONFIG_Update   00000973 
                ISTACK = 00000002 ( 00000000 )
     -------------------------------------------------------------------------
 <NEAR_CODE> 1 (was NEAR_CODE)
-  Relative segment, address: CODE 00000A6E - 00000A8A (0x1d bytes), align: 0
+  Relative segment, address: CODE 00000990 - 000009AC (0x1d bytes), align: 0
   Segment part 24.            Intra module refs:   Program_CONFIG
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           Trigger_IAP             00000A6E 
+           Trigger_IAP             00000990 
                ISTACK = 00000023 ( 00000000 )
     -------------------------------------------------------------------------
 <NEAR_CODE> 1 (was NEAR_CODE)
-  Relative segment, address: CODE 00000A8B - 00000AB8 (0x2e bytes), align: 0
+  Relative segment, address: CODE 000009AD - 000009DA (0x2e bytes), align: 0
   Segment part 31.
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           Program_CONFIG          00000A8B        Wdcon_Init (Init)
+           Program_CONFIG          000009AD        Wdcon_Init (Init)
                calls direct
                ISTACK = 00000000 ( 00000002 )
 
@@ -919,54 +919,54 @@ SFR_AN
            P3M2                    000000AD 
     -------------------------------------------------------------------------
 <NEAR_CODE> 1 (was NEAR_CODE)
-  Relative segment, address: CODE 00000796 - 0000084D (0xb8 bytes), align: 0
+  Relative segment, address: CODE 000006AC - 00000763 (0xb8 bytes), align: 0
   Segment part 37.            Intra module refs:   Sys_Init
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           MODIFY_HIRC_16600       00000796 
+           MODIFY_HIRC_16600       000006AC 
     -------------------------------------------------------------------------
 <NEAR_CODE> 1 (was NEAR_CODE)
-  Relative segment, address: CODE 0000084E - 00000863 (0x16 bytes), align: 0
+  Relative segment, address: CODE 00000764 - 00000779 (0x16 bytes), align: 0
   Segment part 38.            Intra module refs:   Sys_Init
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           Wdcon_Init              0000084E 
+           Wdcon_Init              00000764 
                calls direct
     -------------------------------------------------------------------------
 <NEAR_CODE> 1 (was NEAR_CODE)
-  Relative segment, address: CODE 00000864 - 0000087C (0x19 bytes), align: 0
+  Relative segment, address: CODE 0000077A - 00000792 (0x19 bytes), align: 0
   Segment part 39.            Intra module refs:   Sys_Init
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           Time1_Init              00000864 
+           Time1_Init              0000077A 
     -------------------------------------------------------------------------
 <NEAR_CODE> 1 (was NEAR_CODE)
-  Relative segment, address: CODE 0000087D - 000008A7 (0x2b bytes), align: 0
+  Relative segment, address: CODE 00000793 - 000007BD (0x2b bytes), align: 0
   Segment part 40.            Intra module refs:   Sys_Init
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           Uart0_Init              0000087D 
+           Uart0_Init              00000793 
     -------------------------------------------------------------------------
 <NEAR_CODE> 1 (was NEAR_CODE)
-  Relative segment, address: CODE 000008A8 - 000008C3 (0x1c bytes), align: 0
+  Relative segment, address: CODE 000007BE - 000007E5 (0x28 bytes), align: 0
   Segment part 42.            Intra module refs:   Sys_Init
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           GPIO_Init               000008A8 
+           GPIO_Init               000007BE 
     -------------------------------------------------------------------------
 <NEAR_CODE> 1 (was NEAR_CODE)
-  Relative segment, address: CODE 000008C4 - 000008D3 (0x10 bytes), align: 0
+  Relative segment, address: CODE 000007E6 - 000007F5 (0x10 bytes), align: 0
   Segment part 43.            Intra module refs:   Sys_Init
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           FIFO_Init               000008C4 
+           FIFO_Init               000007E6 
     -------------------------------------------------------------------------
 <NEAR_CODE> 1 (was NEAR_CODE)
-  Relative segment, address: CODE 000008D4 - 00000900 (0x2d bytes), align: 0
+  Relative segment, address: CODE 000007F6 - 00000822 (0x2d bytes), align: 0
   Segment part 44.
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           Sys_Init                000008D4        main (main)
+           Sys_Init                000007F6        main (main)
                calls direct
 
     *************************************************************************
@@ -977,21 +977,21 @@ SFR_AN
   SEGMENTS IN THE MODULE
   ======================
 <NEAR_CODE> 1 (was NEAR_CODE)
-  Relative segment, address: CODE 00000901 - 00000922 (0x22 bytes), align: 0
+  Relative segment, address: CODE 00000823 - 00000844 (0x22 bytes), align: 0
   Segment part 14.            Intra module refs:   Timer1_ISR::??INTVEC 27
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           Timer1_ISR              00000901 
+           Timer1_ISR              00000823 
                interrupt function
                calls direct
                ISTACK = 00000000 ( 0000000E )
     -------------------------------------------------------------------------
 <NEAR_CODE> 1 (was NEAR_CODE)
-  Relative segment, address: CODE 00000923 - 000009F9 (0xd7 bytes), align: 0
+  Relative segment, address: CODE 00000845 - 0000091B (0xd7 bytes), align: 0
   Segment part 15.            Intra module refs:   UART0::??INTVEC 35
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           UART0                   00000923 
+           UART0                   00000845 
                interrupt function
                calls direct
                ISTACK = 00000000 ( 0000000E )
@@ -1019,11 +1019,11 @@ INTVEC
   SEGMENTS IN THE MODULE
   ======================
 IDATA_Z
-  Relative segment, address: IDATA 000000A1 - 000000A1 (0x1 bytes), align: 0
+  Relative segment, address: IDATA 0000009B - 0000009B (0x1 bytes), align: 0
   Segment part 10.
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           Flag                    000000A1        CommProcess (Comm)
+           Flag                    0000009B        CommProcess (Comm)
                                                    CommSend (Comm)
                                                    DataReceive (Comm)
                                                    FIFO_Read (FIFO)
@@ -1032,11 +1032,11 @@ IDATA_Z
                                                    UART0 (Interrupt)
     -------------------------------------------------------------------------
 <NEAR_CODE> 1 (was NEAR_CODE)
-  Relative segment, address: CODE 00000B45 - 00000B6D (0x29 bytes), align: 0
+  Relative segment, address: CODE 00000A67 - 00000A8F (0x29 bytes), align: 0
   Segment part 11.
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           main                    00000B45        ?call_main (?cmain)
+           main                    00000A67        ?call_main (?cmain)
                calls direct
 
     *************************************************************************
@@ -1074,7 +1074,6 @@ CSTART
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
            __INIT_IDATA_Z          0000002B        BIT_TMP (Delay)
-                                                   ControlParame (Comm)
                                                    FIFO (FIFO)
                                                    Feedback (Comm)
                                                    Flag (main)
@@ -1094,6 +1093,8 @@ CSTART
                                                    CRCL (Comm)
                                                    CommRXCTime (Comm)
                                                    CommTXCTime (Comm)
+                                                   HandControlParam1 (Comm)
+                                                   HandControlParam2 (Comm)
                                                    RXCount (Comm)
                                                    STate (Comm)
                                                    TXCount (Comm)
@@ -1293,7 +1294,7 @@ SEGMENT              SPACE    START ADDRESS   END ADDRESS     SIZE  TYPE  ALIGN
 INTVEC               CODE          00000000 - 00000025          26   com    0
 CSTART               CODE          00000026 - 0000005A          35   rel    0
 RCODE                CODE          0000005B - 000001CC         172   rel    0
-<NEAR_CODE> 1        CODE          000001CD - 00000B79         9AD   rel    0
+<NEAR_CODE> 1        CODE          000001CD - 00000A9B         8CF   rel    0
 REGISTERS            DATA          00000000 - 00000007           8   rel    0
 VREG                 DATA          00000008 - 00000009           2   rel    0
 BREG                 BIT        00000020.0  -  00000020.7        8   rel    0
@@ -1311,9 +1312,9 @@ SFR_AN               DATA          00000080 - 00000080           1   rel    0
                      DATA          000000CC - 000000CD           2 
                      DATA          000000F8 - 000000F8           1 
 XDATA_I              XDATA              00000001                     dse    0
-XDATA_Z              XDATA         00000001 - 00000008           8   rel    0
+XDATA_Z              XDATA         00000001 - 0000000A           A   rel    0
 IDATA_I              IDATA              0000000A                     dse    0
-IDATA_Z              IDATA         00000021 - 000000A1          81   rel    0
+IDATA_Z              IDATA         00000021 - 0000009B          7B   rel    0
 ISTACK               IDATA         000000C0 - 000000FF          40   rel    0
 
                 ****************************************
@@ -1322,10 +1323,10 @@ ISTACK               IDATA         000000C0 - 000000FF          40   rel    0
                 *                                      *
                 ****************************************
 
- 2 938 bytes of CODE  memory
+ 2 716 bytes of CODE  memory
     10 bytes of DATA  memory (+ 41 absolute )
-     8 bytes of XDATA memory
-   193 bytes of IDATA memory
+    10 bytes of XDATA memory
+   187 bytes of IDATA memory
      8 bits  of BIT   memory
 
 Errors: none

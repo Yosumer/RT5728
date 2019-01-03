@@ -1,5 +1,7 @@
 #include "Include.h"
 RT_Flag Flag;
+
+void ControlParamProcess(void);
 /*******************************************************************************
 *       Main Function
 *******************************************************************************/
@@ -13,4 +15,8 @@ void main (void)
         set_WDCLR;
         Comm();
     }
+}
+
+void ControlParamProcess(void)
+{
 }
