@@ -6,15 +6,18 @@
 #include "IAP.h"
 #include "Variable.h"
 #include "Function.h"
+#include "ControlBox.h"
 
+#define On      1
+#define Off     0
+#define True    1
+#define False   0
 
-#define T1Nuber 1384
-#define LED  P15
-#define RS485_EN  P05
-
-#define Blue  P03
-#define Red  P01
-#define Green  P00
+#define T1Nuber     1384
+#define RS485_EN    P05
+#define Power       P02
+#define Hot         P12
+#define Vibrate     P11
 
 #define WSTART 0x21
 #define START  0x22

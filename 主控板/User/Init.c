@@ -92,6 +92,9 @@ void GPIO_Init(void)
 {
     Set_All_GPIO_Quasi_Mode;
     P05_PushPull_Mode;//485EN
+    P02_PushPull_Mode;//Power
+    P12_PushPull_Mode;//Hot
+    P11_PushPull_Mode;//Vibrate
 //    P06_PushPull_Mode;//TX
     return;
 }

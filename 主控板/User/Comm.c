@@ -12,6 +12,12 @@ __xdata char CommRXCTime;
 __xdata char CommTXCTime;
 __xdata char HandControlParam1;
 __xdata char HandControlParam2;
+__xdata char UpControlParam1;
+__xdata char UpControlParam2;
+__xdata char DownControlParam1;
+__xdata char DownControlParam2;
+
+
 
 char Receive[19];
 
@@ -226,8 +232,8 @@ void CommSend(void)
                     SendDrive.Byte.CommanH=0x30;
                     SendDrive.Byte.LenghtL=0x02;
                     SendDrive.Byte.LenghtH=0x00;
-                    SendDrive.Byte.Data[0]=HandControlParam1;
-                    SendDrive.Byte.Data[1]=HandControlParam2;
+                    SendDrive.Byte.Data[0]=UpControlParam1;
+                    SendDrive.Byte.Data[1]=UpControlParam2;
                     CRC_CCITT(SendDrive.nSendDrive,11);
                     SendDrive.Byte.CRCL=CRCL;
                     SendDrive.Byte.CRCH=CRCH;
@@ -247,8 +253,8 @@ void CommSend(void)
                     SendDrive.Byte.CommanH=0x30;
                     SendDrive.Byte.LenghtL=0x02;
                     SendDrive.Byte.LenghtH=0x00;
-                    SendDrive.Byte.Data[0]=HandControlParam1;
-                    SendDrive.Byte.Data[1]=HandControlParam2;
+                    SendDrive.Byte.Data[0]=DownControlParam1;
+                    SendDrive.Byte.Data[1]=DownControlParam2;
                     CRC_CCITT(SendDrive.nSendDrive,11);
                     SendDrive.Byte.CRCL=CRCL;
                     SendDrive.Byte.CRCH=CRCH;

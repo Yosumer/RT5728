@@ -140,4 +140,12 @@ extern __xdata char CommRXCTime;
 extern __xdata char CommTXCTime;
 extern __xdata char TXCount;
 
+extern __xdata char HandControlParam1;
+extern __xdata char HandControlParam2;
+extern __xdata char UpControlParam1;
+extern __xdata char UpControlParam2;
+extern __xdata char DownControlParam1;
+extern __xdata char DownControlParam2;
+
+
 #endif
