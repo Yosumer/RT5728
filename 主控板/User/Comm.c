@@ -1,6 +1,8 @@
 #include "Include.h"
 RT_SendDrive SendDrive;
 RT_HandController HandController;
+RT_Feedback HandFeedback;
+
 __xdata char CRCH;
 __xdata char CRCL;
 __xdata char RXCount;
@@ -8,7 +10,17 @@ __xdata char TXCount;
 __xdata char STate;
 __xdata char CommRXCTime;
 __xdata char CommTXCTime;
+__xdata char HandControlParam1;
+__xdata char HandControlParam2;
+__xdata char UpControlParam1;
+__xdata char UpControlParam2;
+__xdata char DownControlParam1;
+__xdata char DownControlParam2;
+
 char Receive[19];
+
+void * my_memcpy(void *dest,void *src,unsigned count );
+
 /*******************************************************************************
 *       CommTime Function
 *******************************************************************************/
@@ -38,10 +50,10 @@ void TXC_Time(void)
 *******************************************************************************/
 void Send_Time(void)
 {
-    static char SendTime50ms=0;
-    if(SendTime50ms++>49)
+    static char SendTime75ms=0;
+    if(SendTime75ms++>74)
     {
-        SendTime50ms=0;
+        SendTime75ms=0;
         if(CommTXCTime>0x05)
         {
             Flag.Bit.Allow_send=1;
@@ -149,13 +161,37 @@ void CommProcess(void)
             case 0x0d:
             {
                 CRC_CCITT(Receive,11);
-                if((Receive[11]==CRCL)&&(Receive[12]==CRCH));
+                if((Receive[11]==CRCL)&&(Receive[12]==CRCH)&&Receive[2]==HandBrdAdd)//扶手按键
+                {
+                    HandControlParam1 = Receive[9];
+                    HandControlParam2 = Receive[10];
+                }
                 break;
             }
             case 0x13:
             {
                 CRC_CCITT(Receive,17);
-                if((Receive[17]==CRCL)&&(Receive[18]==CRCH));
+                if((Receive[17]==CRCL)&&(Receive[18]==CRCH))
+                {
+                    if(Receive[2]==UpBrdAdd)//上机芯
+                    {
+                        HandFeedback.Byte.UpKnead = Receive[10]&0x3;
+                        HandFeedback.Byte.UpWalk = (Receive[13]&0xc)>>2;
+                        HandFeedback.Byte.UpLimitUp = Receive[15]&0x1;
+                        HandFeedback.Byte.UpLimitDown = (Receive[15]&0x2)>>1;
+                        HandFeedback.Byte.UpError = Receive[16]&0x3;
+                    }
+                    else if(Receive[2]==DownBrdAdd)//下机芯
+                    {
+                        HandFeedback.Byte.DownKnead = (Receive[10]&0xc)>>2;
+                        HandFeedback.Byte.Percussion = (Receive[10]&0x30)>>4;
+                        HandFeedback.Byte.DownWalk = (Receive[13]&0x30)>>4;
+                        HandFeedback.Byte.DownLimitUp = (Receive[15]&0x4)>>2;
+                        HandFeedback.Byte.DownLimitDown = (Receive[15]&0x8)>>3;
+                        HandFeedback.Byte.DownError = (Receive[16]&0xc)>>2;
+                    }
+                    
+                }
                 break;
             }
             default:
@@ -190,6 +226,8 @@ void CommSend(void)
                     SendDrive.Byte.CommanH=0x30;
                     SendDrive.Byte.LenghtL=0x02;
                     SendDrive.Byte.LenghtH=0x00;
+                    SendDrive.Byte.Data[0]=UpControlParam1;
+                    SendDrive.Byte.Data[1]=UpControlParam2;
                     CRC_CCITT(SendDrive.nSendDrive,11);
                     SendDrive.Byte.CRCL=CRCL;
                     SendDrive.Byte.CRCH=CRCH;
@@ -209,6 +247,8 @@ void CommSend(void)
                     SendDrive.Byte.CommanH=0x30;
                     SendDrive.Byte.LenghtL=0x02;
                     SendDrive.Byte.LenghtH=0x00;
+                    SendDrive.Byte.Data[0]=DownControlParam1;
+                    SendDrive.Byte.Data[1]=DownControlParam2;
                     CRC_CCITT(SendDrive.nSendDrive,11);
                     SendDrive.Byte.CRCL=CRCL;
                     SendDrive.Byte.CRCH=CRCH;
@@ -228,6 +268,7 @@ void CommSend(void)
                     HandController.Byte.CommanH=0x30;
                     HandController.Byte.LenghtL=0x08;
                     HandController.Byte.LenghtH=0x00;
+                    my_memcpy(HandController.Byte.Data,&HandFeedback,sizeof(HandFeedback));
                     CRC_CCITT(HandController.nHandController,17);
                     HandController.Byte.CRCL=CRCL;
                     HandController.Byte.CRCH=CRCH;
@@ -240,6 +281,24 @@ void CommSend(void)
         }
     }
     return;
+}
+
+/*******************************************************************************
+*       my_memcpy Processing Function
+*******************************************************************************/
+void * my_memcpy(void *dest,void *src,unsigned count )
+{
+	if (dest == NULL || src == NULL)
+	{
+		return NULL;
+	}
+	char* pdest =(char*) dest;
+	char* psrc = (char*)src;
+	while (count--)
+	{
+		*pdest++ = *psrc++;
+	}
+	return dest;
 }
 
 void Comm(void)

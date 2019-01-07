@@ -16,6 +16,11 @@
 #define Red  P01
 #define Green  P00
 
+#define MainBrdAdd      0x01
+#define UpBrdAdd        0x06
+#define DownBrdAdd      0x07
+#define HandBrdAdd      0x0A
+
 #define WSTART 0x21
 #define START  0x22
 #define DATA   0x25

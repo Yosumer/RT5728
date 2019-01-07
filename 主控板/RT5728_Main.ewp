@@ -279,7 +279,7 @@
                 </option>
                 <option>
                     <name>OGChipConfigPath</name>
-                    <state>D:\Program Files\IAR Systems\Embedded Workbench 8.0\8051\bin\..\config\devices\NuvoTon\N76E\N76E003.i51</state>
+                    <state>E:\Program Files\IAR Systems\Embedded Workbench 8.1\8051\bin\..\config\devices\Nuvoton\N76E\N76E003.i51</state>
                 </option>
             </data>
         </settings>
@@ -810,7 +810,7 @@
                 </option>
                 <option>
                     <name>XclFile</name>
-                    <state>E:\按摩椅\RT5728\主控板\lnk51ew_N76E003.xcl</state>
+                    <state>E:\荣泰健康\按摩椅\RT5728\主控板\lnk51ew_N76E003.xcl</state>
                 </option>
                 <option>
                     <name>XclFileSlave</name>

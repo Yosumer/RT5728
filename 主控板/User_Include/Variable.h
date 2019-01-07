@@ -73,6 +73,56 @@ typedef union
     }Byte;
 }RT_HandController;
 /*******************************************************************************
+*       Feedback struct
+*******************************************************************************/
+typedef union
+{
+    char nFeedback[8];
+    struct
+    {
+        unsigned char Auto :3;
+        unsigned char Time :2;
+        unsigned char Sys :2;
+        unsigned char Nop1 :1;
+        
+        unsigned char UpKnead :2;
+        unsigned char DownKnead :2;
+        unsigned char Percussion :2;
+        unsigned char Shock :2;
+        
+        unsigned char AirbagStrength :3;
+        unsigned char GasbagLocation :3;
+        unsigned char Nop3 :2;
+        
+        unsigned char heat :2;
+        unsigned char heatLocation :2;
+        unsigned char Nop4 :4;
+        
+        unsigned char BackPad :2;
+        unsigned char UpWalk :2;
+        unsigned char DownWalk :2;
+        unsigned char LegWalk :2;
+        
+        unsigned char Up3D :2;
+        unsigned char Down3D :3;
+        unsigned char Nop6 :3;
+        
+        unsigned char UpLimitUp :1;
+        unsigned char UpLimitDown :1;       
+        unsigned char DownLimitUp :1;
+        unsigned char DownLimitDown :1;
+        unsigned char LegLimitUp :1;
+        unsigned char LegLimitDown :1;
+        unsigned char Nop7 :2;
+        
+        unsigned char UpError :2;
+        unsigned char DownError :2;
+        unsigned char Nop8 :4;
+        
+    }Byte;
+}RT_Feedback;
+
+/*******************************************************************************
 *       FIFO.c Function declaration
 *******************************************************************************/
 extern RT_FIFO FIFO;
