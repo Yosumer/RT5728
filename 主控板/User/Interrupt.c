@@ -1,4 +1,5 @@
 #include "Include.h"
+
 /*******************************************************************************
 *       Time_1 interrupt add 1BH(1ms)
 *******************************************************************************/
@@ -12,6 +13,21 @@ __interrupt void Timer1_ISR (void)      //interrupt address is 0x001B
     RXC_Time();
     TXC_Time();
     Send_Time();
+    static unsigned int bTime_200ms = 0;
+    static unsigned int bTime_1s = 0;
+    if(bTime_1s>999)
+    {
+        bTime_1s=0;
+        Time1s_pro();
+    }
+    else bTime_1s++;
+
+    if(bTime_200ms>199)
+    {
+        bTime_200ms=0;
+        Time200ms_pro();
+    }
+    else bTime_200ms++;
 //    LED=~LED;
 }
 /*******************************************************************************
@@ -89,4 +105,21 @@ __interrupt void UART0 (void)      //interrupt address is 0x0023
         CommRXCTime=0x00;
         FIFO_Write(SBUF);
     }
+}
+/*******************************************************************************
+*       EX0 interrupt add 03H 
+*******************************************************************************/
+#pragma vector = 0x03
+__interrupt void INT0_ISR(void)
+{
+
+}
+
+/*******************************************************************************
+*       EX0 interrupt add 03H 
+*******************************************************************************/
+#pragma vector = 0x13
+__interrupt void INT1_ISR(void)
+{
+
 }

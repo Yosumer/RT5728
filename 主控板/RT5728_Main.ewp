@@ -576,7 +576,7 @@
                 </option>
                 <option>
                     <name>OutputFile</name>
-                    <state></state>
+                    <state>$FILE_BNAME$.r51</state>
                 </option>
                 <option>
                     <name>ACaseSensitivity</name>
@@ -2238,6 +2238,12 @@
     </group>
     <group>
         <name>User</name>
+        <file>
+            <name>$PROJ_DIR$\User\AutoFunction.c</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\User\BackPad.c</name>
+        </file>
         <file>
             <name>$PROJ_DIR$\User\Comm.c</name>
         </file>

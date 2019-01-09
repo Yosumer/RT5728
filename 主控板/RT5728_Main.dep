@@ -1,109 +1,88 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project>
     <fileVersion>2</fileVersion>
-    <fileChecksum>1064297848</fileChecksum>
+    <fileChecksum>772301317</fileChecksum>
     <configuration>
         <name>Debug</name>
         <outputs>
-            <file>$PROJ_DIR$\Include\N76E003_iar.h</file>
-            <file>$PROJ_DIR$\Include\SFR_Macro.h</file>
-            <file>$PROJ_DIR$\Debug\Obj\IAP.r51</file>
-            <file>$PROJ_DIR$\Debug\Obj\IAP.__cstat.et</file>
-            <file>$PROJ_DIR$\Debug\Obj\Init.r51</file>
-            <file>$PROJ_DIR$\Debug\Obj\Interrupt.r51</file>
-            <file>$PROJ_DIR$\Include\Function_define.h</file>
-            <file>$PROJ_DIR$\Debug\Obj\Interrupt.pbi</file>
-            <file>$PROJ_DIR$\Include\Common.h</file>
-            <file>$PROJ_DIR$\Debug\Obj\Init.pbi</file>
-            <file>$PROJ_DIR$\Debug\Obj\Common.pbi</file>
-            <file>$PROJ_DIR$\Debug\Exe\RT5728_Main.bin</file>
-            <file>$TOOLKIT_DIR$\inc\clib\stdio.h</file>
-            <file>$PROJ_DIR$\Debug\Obj\main.r51</file>
-            <file>$PROJ_DIR$\Debug\Obj\main.__cstat.et</file>
-            <file>$PROJ_DIR$\Debug\Obj\main.pbi</file>
-            <file>$PROJ_DIR$\Include\Delay.h</file>
-            <file>$TOOLKIT_DIR$\inc\clib\sysmac.h</file>
-            <file>$TOOLKIT_DIR$\lib\clib\cl-pli-nsid-2h16inc.r51</file>
-            <file>$PROJ_DIR$\Debug\Obj\RT5728_Main.pbd</file>
-            <file>$PROJ_DIR$\Debug\Obj\Delay.pbi</file>
-            <file>$PROJ_DIR$\Debug\List\RT5728_Main.map</file>
-            <file>$PROJ_DIR$\Debug\Obj\IAP.pbi</file>
-            <file>$PROJ_DIR$\Debug\Obj\Delay.r51</file>
-            <file>$PROJ_DIR$\Debug\Obj\Interrupt.__cstat.et</file>
-            <file>$PROJ_DIR$\Debug\Obj\Comm.__cstat.et</file>
-            <file>$TOOLKIT_DIR$\inc\clib\stdarg.h</file>
-            <file>$PROJ_DIR$\Debug\Obj\Common.r51</file>
-            <file>$PROJ_DIR$\Debug\Obj\FIFO.pbi</file>
-            <file>$PROJ_DIR$\Debug\Obj\FIFO.r51</file>
-            <file>$PROJ_DIR$\Debug\Obj\Common.__cstat.et</file>
             <file>$PROJ_DIR$\Debug\Obj\Delay.__cstat.et</file>
-            <file>$PROJ_DIR$\Common\Common.c</file>
-            <file>$PROJ_DIR$\Common\Delay.c</file>
             <file>$PROJ_DIR$\User\FIFO.c</file>
-            <file>$PROJ_DIR$\User\Init.c</file>
-            <file>$PROJ_DIR$\User_Include\Function.h</file>
             <file>$PROJ_DIR$\User_Include\Include.h</file>
-            <file>$PROJ_DIR$\Common\IAP.c</file>
-            <file>$PROJ_DIR$\User_Include\Variable.h</file>
+            <file>$PROJ_DIR$\Common\Delay.c</file>
+            <file>$PROJ_DIR$\lnk51ew_N76E003.xcl</file>
+            <file>$PROJ_DIR$\User\BackPad.c</file>
+            <file>$PROJ_DIR$\Debug\Obj\Init.pbi</file>
+            <file>$PROJ_DIR$\Debug\Obj\FIFO.pbi</file>
+            <file>$PROJ_DIR$\Include\Function_define.h</file>
+            <file>$TOOLKIT_DIR$\inc\clib\sysmac.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\main.__cstat.et</file>
+            <file>$PROJ_DIR$\Debug\Exe\RT5728_Main.bin</file>
             <file>$PROJ_DIR$\User\Comm.c</file>
             <file>$PROJ_DIR$\User\Interrupt.c</file>
-            <file>$PROJ_DIR$\User\main.c</file>
             <file>$PROJ_DIR$\Debug\Obj\FIFO.__cstat.et</file>
-            <file>$PROJ_DIR$\User_Include\ControlBox.h</file>
-            <file>$PROJ_DIR$\Debug\Obj\Comm.r51</file>
-            <file>$PROJ_DIR$\Debug\Obj\Comm.pbi</file>
-            <file>$PROJ_DIR$\lnk51ew_N76E003.xcl</file>
+            <file>$PROJ_DIR$\Debug\Obj\Interrupt.pbi</file>
+            <file>$PROJ_DIR$\Include\Delay.h</file>
+            <file>$PROJ_DIR$\User\AutoFunction.c</file>
+            <file>$PROJ_DIR$\Common\Common.c</file>
+            <file>$PROJ_DIR$\User\Init.c</file>
+            <file>$PROJ_DIR$\User_Include\Function.h</file>
+            <file>$PROJ_DIR$\User_Include\Variable.h</file>
+            <file>$PROJ_DIR$\Common\IAP.c</file>
+            <file>$PROJ_DIR$\User\main.c</file>
+            <file>$PROJ_DIR$\Include\N76E003_iar.h</file>
+            <file>$PROJ_DIR$\Include\Common.h</file>
             <file>$PROJ_DIR$\Debug\Obj\Init.__cstat.et</file>
             <file>$PROJ_DIR$\Include\IAP.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\RT5728_Main.pbd</file>
+            <file>$PROJ_DIR$\User_Include\BackPad.h</file>
+            <file>$PROJ_DIR$\User_Include\main.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\IAP.r51</file>
+            <file>$PROJ_DIR$\Debug\Obj\Comm.pbi</file>
+            <file>$PROJ_DIR$\Debug\Obj\IAP.__cstat.et</file>
+            <file>$PROJ_DIR$\Debug\Obj\Common.r51</file>
+            <file>$PROJ_DIR$\Debug\Obj\Comm.__cstat.et</file>
+            <file>$PROJ_DIR$\Debug\Obj\Common.pbi</file>
+            <file>$PROJ_DIR$\Debug\Obj\Comm.r51</file>
+            <file>$PROJ_DIR$\Debug\Obj\main.r51</file>
+            <file>$PROJ_DIR$\Debug\Obj\Interrupt.r51</file>
+            <file>$PROJ_DIR$\Debug\Obj\IAP.pbi</file>
+            <file>$PROJ_DIR$\Debug\Obj\BackPad.pbi</file>
+            <file>$PROJ_DIR$\Debug\Obj\Common.__cstat.et</file>
+            <file>$PROJ_DIR$\Debug\Obj\main.pbi</file>
+            <file>$PROJ_DIR$\Debug\Obj\FIFO.r51</file>
+            <file>$TOOLKIT_DIR$\inc\clib\stdio.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\BackPad.r51</file>
+            <file>$PROJ_DIR$\Debug\Obj\Delay.pbi</file>
+            <file>$PROJ_DIR$\Debug\List\RT5728_Main.map</file>
+            <file>$PROJ_DIR$\Debug\Obj\Delay.r51</file>
+            <file>$TOOLKIT_DIR$\inc\clib\stdarg.h</file>
+            <file>$TOOLKIT_DIR$\lib\clib\cl-pli-nsid-2h16inc.r51</file>
+            <file>$PROJ_DIR$\Debug\Obj\Init.r51</file>
+            <file>$PROJ_DIR$\Debug\Obj\Interrupt.__cstat.et</file>
+            <file>$PROJ_DIR$\Include\SFR_Macro.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\AutoFunction.pbi</file>
+            <file>$PROJ_DIR$\Debug\Obj\AutoFunction.r51</file>
         </outputs>
         <file>
-            <name>[ROOT_NODE]</name>
+            <name>$PROJ_DIR$\User\FIFO.c</name>
             <outputs>
                 <tool>
-                    <name>XLINK</name>
-                    <file> 11 21</file>
+                    <name>BICOMP</name>
+                    <file> 7</file>
                 </tool>
-            </outputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\Debug\Exe\RT5728_Main.bin</name>
-            <outputs>
                 <tool>
-                    <name>XLINK</name>
-                    <file> 21</file>
+                    <name>ICC8051</name>
+                    <file> 44</file>
                 </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>XLINK</name>
-                    <file> 47 45 27 23 29 2 4 5 13 18</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\Common\Common.c</name>
-            <outputs>
                 <tool>
                     <name>__cstat</name>
-                    <file> 30</file>
-                </tool>
-                <tool>
-                    <name>ICC8051</name>
-                    <file> 27</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 10</file>
+                    <file> 14</file>
                 </tool>
             </outputs>
             <inputs>
                 <tool>
                     <name>ICC8051</name>
-                    <file> 0 8 16 1 6 12 26 17</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 26 6 16 17 8 1 12 0</file>
+                    <file> 2 24 54 8 45 50 9 25 16 27 21 20 30 29</file>
                 </tool>
             </inputs>
         </file>
@@ -111,107 +90,60 @@
             <name>$PROJ_DIR$\Common\Delay.c</name>
             <outputs>
                 <tool>
-                    <name>__cstat</name>
-                    <file> 31</file>
+                    <name>BICOMP</name>
+                    <file> 47</file>
                 </tool>
                 <tool>
                     <name>ICC8051</name>
-                    <file> 23</file>
+                    <file> 49</file>
                 </tool>
                 <tool>
+                    <name>__cstat</name>
+                    <file> 0</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
                     <name>BICOMP</name>
-                    <file> 20</file>
+                    <file> 50 8 16 25 54 9 24 45</file>
+                </tool>
+                <tool>
+                    <name>ICC8051</name>
+                    <file> 24 25 16 54 8 45 50 9</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\User\BackPad.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 41</file>
+                </tool>
+                <tool>
+                    <name>ICC8051</name>
+                    <file> 46</file>
                 </tool>
             </outputs>
             <inputs>
                 <tool>
                     <name>ICC8051</name>
-                    <file> 0 8 16 1 6 12 26 17</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 26 6 16 8 1 17 0 12</file>
+                    <file> 2 24 54 8 45 50 9 25 16 27 21 20 30 29</file>
                 </tool>
             </inputs>
         </file>
         <file>
-            <name>$PROJ_DIR$\User\FIFO.c</name>
+            <name>$PROJ_DIR$\Debug\Exe\RT5728_Main.bin</name>
             <outputs>
                 <tool>
-                    <name>__cstat</name>
-                    <file> 43</file>
-                </tool>
-                <tool>
-                    <name>ICC8051</name>
-                    <file> 29</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 28</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICC8051</name>
-                    <file> 37 0 1 6 12 26 17 8 16 49 39 36 44</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 6 39 26 0 16 44 17 1 8 49 36 12 37</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\User\Init.c</name>
-            <outputs>
-                <tool>
-                    <name>__cstat</name>
+                    <name>XLINK</name>
                     <file> 48</file>
                 </tool>
-                <tool>
-                    <name>ICC8051</name>
-                    <file> 4</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 9</file>
-                </tool>
             </outputs>
             <inputs>
                 <tool>
-                    <name>ICC8051</name>
-                    <file> 37 0 1 6 12 26 17 8 16 49 39 36 44</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 0 44 16 26 6 39 17 1 8 49 36 12 37</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\Common\IAP.c</name>
-            <outputs>
-                <tool>
-                    <name>__cstat</name>
-                    <file> 3</file>
-                </tool>
-                <tool>
-                    <name>ICC8051</name>
-                    <file> 2</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 22</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICC8051</name>
-                    <file> 0 1 6 12 26 17 8 16 49</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 16 6 1 8 49 26 17 0 12</file>
+                    <name>XLINK</name>
+                    <file> 4 56 46 37 34 49 44 31 52 39 38 51</file>
                 </tool>
             </inputs>
         </file>
@@ -219,26 +151,22 @@
             <name>$PROJ_DIR$\User\Comm.c</name>
             <outputs>
                 <tool>
-                    <name>__cstat</name>
-                    <file> 25</file>
+                    <name>BICOMP</name>
+                    <file> 32</file>
                 </tool>
                 <tool>
                     <name>ICC8051</name>
-                    <file> 45</file>
+                    <file> 37</file>
                 </tool>
                 <tool>
-                    <name>BICOMP</name>
-                    <file> 46</file>
+                    <name>__cstat</name>
+                    <file> 35</file>
                 </tool>
             </outputs>
             <inputs>
                 <tool>
                     <name>ICC8051</name>
-                    <file> 37 0 1 6 12 26 17 8 16 49 39 36 44</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 8 26 36 1 49 17 0 6 16 39 44 37 12</file>
+                    <file> 2 24 54 8 45 50 9 25 16 27 21 20 30 29</file>
                 </tool>
             </inputs>
         </file>
@@ -246,26 +174,118 @@
             <name>$PROJ_DIR$\User\Interrupt.c</name>
             <outputs>
                 <tool>
-                    <name>__cstat</name>
-                    <file> 24</file>
+                    <name>BICOMP</name>
+                    <file> 15</file>
                 </tool>
                 <tool>
                     <name>ICC8051</name>
-                    <file> 5</file>
+                    <file> 39</file>
                 </tool>
                 <tool>
-                    <name>BICOMP</name>
-                    <file> 7</file>
+                    <name>__cstat</name>
+                    <file> 53</file>
                 </tool>
             </outputs>
             <inputs>
                 <tool>
                     <name>ICC8051</name>
-                    <file> 37 0 1 6 12 26 17 8 16 49 39 36 44</file>
+                    <file> 2 24 54 8 45 50 9 25 16 27 21 20 30 29</file>
                 </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\User\AutoFunction.c</name>
+            <outputs>
                 <tool>
                     <name>BICOMP</name>
-                    <file> 49 1 26 8 36 12 17 0 6 16 39 44 37</file>
+                    <file> 55</file>
+                </tool>
+                <tool>
+                    <name>ICC8051</name>
+                    <file> 56</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICC8051</name>
+                    <file> 30</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\Common\Common.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 36</file>
+                </tool>
+                <tool>
+                    <name>ICC8051</name>
+                    <file> 34</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 42</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 50 8 16 9 25 54 45 24</file>
+                </tool>
+                <tool>
+                    <name>ICC8051</name>
+                    <file> 24 25 16 54 8 45 50 9</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\User\Init.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 6</file>
+                </tool>
+                <tool>
+                    <name>ICC8051</name>
+                    <file> 52</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 26</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICC8051</name>
+                    <file> 2 24 54 8 45 50 9 25 16 27 21 20 30 29</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\Common\IAP.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 40</file>
+                </tool>
+                <tool>
+                    <name>ICC8051</name>
+                    <file> 31</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 33</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 16 8 54 25 27 50 9 24 45</file>
+                </tool>
+                <tool>
+                    <name>ICC8051</name>
+                    <file> 24 54 8 45 50 9 25 16 27</file>
                 </tool>
             </inputs>
         </file>
@@ -273,28 +293,29 @@
             <name>$PROJ_DIR$\User\main.c</name>
             <outputs>
                 <tool>
-                    <name>__cstat</name>
-                    <file> 14</file>
-                </tool>
-                <tool>
-                    <name>ICC8051</name>
-                    <file> 13</file>
-                </tool>
-                <tool>
                     <name>BICOMP</name>
-                    <file> 15</file>
+                    <file> 43</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 10</file>
                 </tool>
             </outputs>
             <inputs>
                 <tool>
                     <name>ICC8051</name>
-                    <file> 37 0 1 6 12 26 17 8 16 49 39 36 44</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 1 49 26 8 36 12 17 0 6 16 39 44 37</file>
+                    <file> 2 24 54 8 45 50 9 25 16 27 21 20 30 29</file>
                 </tool>
             </inputs>
+        </file>
+        <file>
+            <name>[ROOT_NODE]</name>
+            <outputs>
+                <tool>
+                    <name>XLINK</name>
+                    <file> 11 48</file>
+                </tool>
+            </outputs>
         </file>
     </configuration>
     <configuration>

@@ -165,7 +165,7 @@ void CommProcess(void)
                 CRC_CCITT(Receive,11);//扶手按键
                 if((Receive[11]==CRCL)&&(Receive[12]==CRCH))
                 {
-                    if(Receive[2]!=0x0a) break;
+                    if(Receive[2]!=HandBrdAddress) break;
                     HandControlParam1 = Receive[9];
                     HandControlParam2 = Receive[10];
                 }
@@ -178,15 +178,14 @@ void CommProcess(void)
                 {
                     switch(Receive[2])
                     {
-                        case 0x06://上机芯
+                        case UpsideAddress://上机芯
                             Feedback.Byte.UpKnead = Receive[10]&0x3;
-                            Feedback.Byte.Percussion = (Receive[10]&0x30)>>4;
                             Feedback.Byte.UpWalk = (Receive[13]&0xc)>>2;
                             Feedback.Byte.UpLimitUp = Receive[15]&0x1;
                             Feedback.Byte.UpLimitDown = (Receive[15]&0x2)>>1;
                             Feedback.Byte.UpError = Receive[16]&0x3;
                             break;
-                        case 0x07://下机芯
+                        case DownsideAddress://下机芯
                             Feedback.Byte.DownKnead = (Receive[10]&0xc)>>2;
                             Feedback.Byte.Percussion = (Receive[10]&0x30)>>4;
                             Feedback.Byte.DownWalk = (Receive[13]&0x30)>>4;

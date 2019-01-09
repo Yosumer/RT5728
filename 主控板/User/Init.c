@@ -92,10 +92,35 @@ void GPIO_Init(void)
 {
     Set_All_GPIO_Quasi_Mode;
     P05_PushPull_Mode;//485EN
-    P02_PushPull_Mode;//Power
-    P12_PushPull_Mode;//Hot
-    P11_PushPull_Mode;//Vibrate
-//    P06_PushPull_Mode;//TX
+    P02_PushPull_Mode;//PWR
+
+    //靠背电动缸
+    P00_PushPull_Mode;
+    P01_PushPull_Mode;
+    P03_PushPull_Mode;
+    P04_Input_Mode;
+    P13_PushPull_Mode;
+    PWM_CLOCK_FSYS;
+    PWM3_P00_OUTPUT_ENABLE;
+    clr_PWMTYP;
+    clr_PWMMOD0;
+    clr_PWMMOD1;
+    PWM_CLOCK_DIV_8;
+    PWMPH=0X01;
+    PWMPL=0XF4;
+    PWM3H=0X00;
+    PWM3L=0X00;
+    set_LOAD;
+    set_PWMRUN;
+    //INT0 掉电模式下唤醒
+    P30_Input_Mode;
+    IT0=0;
+    EX0=1;
+    //INT1 靠背电机计数
+    P17_Input_Mode;
+    //IT1=0;
+    //EX1=1;
+    EA=1;
     return;
 }
 /*******************************************************************************

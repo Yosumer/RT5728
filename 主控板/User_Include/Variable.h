@@ -104,8 +104,8 @@ typedef union
         unsigned char LegWalk :2;
         
         unsigned char Up3D :2;
-        unsigned char Down3D :2;
-        unsigned char Nop6 :4;
+        unsigned char Down3D :3;
+        unsigned char Nop6 :2;
         
         unsigned char UpLimitUp :1;
         unsigned char UpLimitDown :1;       
@@ -121,6 +121,23 @@ typedef union
         
     }Byte;
 }RT_Feedback;
+
+typedef union
+{
+    struct
+    {
+        unsigned bD0:1 ;
+        unsigned bD1:1 ;
+        unsigned bD2:1 ;
+        unsigned bD3:1 ;
+        unsigned bD4:1 ;
+        unsigned bD5:1 ;
+        unsigned bD6:1 ;
+        unsigned bD7:1 ;
+    } ;
+    unsigned char nByte ;
+}BITS ;
+
 /*******************************************************************************
 *       FIFO.c Function declaration
 *******************************************************************************/
